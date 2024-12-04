@@ -51,10 +51,14 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'Sociales.apps.SocialesConfig',
     'cloudinary',
+    'ckeditor',
+    'ckeditor_uploader'
 ]
 
 import pymysql
 pymysql.install_as_MySQLdb()
+AUTH_USER_MODEL = 'Sociales.User'
+CKEDITOR_UPLOAD_PATH = "images/lessons/"
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
